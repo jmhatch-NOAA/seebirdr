@@ -28,6 +28,9 @@ library(seebirdr)
 library(dplyr)
 library(magrittr)
 
+# database connection
+dbs_con <- .channel
+
 # directory path to data
 dir_path <- system.file("extdata", "GU1905_SeaScribe", package = "seebirdr")
 
