@@ -251,7 +251,7 @@ direction_codify <- function(.data, .flight_direction) {
     !!flight_dir_var == 'SW' ~ '225',
     !!flight_dir_var == 'W' ~ '270',
     !!flight_dir_var == 'NW' ~ '315',
-    !!flight_dir_var == 'No Direction' ~ '',
+    !!flight_dir_var == 'No Direction' ~ NA_character_,
     TRUE ~ as.character(!!flight_dir_var)
   ))
 
