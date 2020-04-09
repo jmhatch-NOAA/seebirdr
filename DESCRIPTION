@@ -1,0 +1,25 @@
+Package: seebirdr
+Type: Package
+Title: Formats and summarizes seabird shipboard survey data for database upload and
+    cruise reports.
+Version: 0.1.0
+Authors@R: c(
+    person(given = "Joshua", family = "Hatch", email = "joshua.hatch@noaa.gov", role = c("cre", "aut")),
+    person(given = "Elizabeth", family = "Josephson", email = "elizabeth.josephson@noaa.gov", role = "aut"),
+    person(given = "Douglas", family = "Sigourney", email = "douglas.sigourney@noaa.gov", role = "aut"))
+Description: Loads, cleans, and summarizes data output from SeaScribe for upload to the internal NEFSC database.
+    Also provides summary statistics for use in cruise reports.
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
+Imports: 
+    dplyr,
+    DBI,
+    janitor,
+    magrittr,
+    odbc,
+    purrr,
+    readr,
+    readxl,
+    stringr
+RoxygenNote: 7.1.0
