@@ -19,12 +19,12 @@ remotes::install_github("jmhatch/seebirdr")
 Several of the functions require a connection to the internal NEFSC database following:
 
 ```R
-.channel <- DBI::dbConnect(odbc::odbc(), driver, DBQ, UID, PWD)
+.channel <- DBI::dbConnect(odbc::odbc(), driver = [driver], DBQ = [dbq], UID = [uid], PWD = [pwd])
 ```
 
 ### Example
 
-An example workflow of how to use the functionality of seebirdr is provided below:
+An example workflow of how to use the functionality of `seebirdr` is provided below:
 
 ```R
 # load libraries
