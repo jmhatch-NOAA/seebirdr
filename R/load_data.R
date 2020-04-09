@@ -5,6 +5,8 @@
 #' @param directory_path A directory path string.
 #' @param ... Arguments to be passed to readr::read_csv.
 #'
+#' @importFrom magrittr "%<>%"
+#'
 #' @return The concatenated tibble with column names in snake case.
 #'
 #' @export
@@ -30,6 +32,8 @@ upload_data_csv <- function(.directory_path, ...) {
 #'
 #' @inheritParams upload_data_csv
 #' @param ... Arguments to be passed to readxl::read_excel.
+#'
+#' @importFrom magrittr "%<>%"
 #'
 #' @return The concatenated tibble with column names in snake case.
 #'
