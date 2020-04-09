@@ -30,7 +30,8 @@ remove_apostrophe <- function(.data, ...) {
 #' @param .datetime Name of the column field that identifies the datetime.
 #' @param .tz Time zone of the datetime.
 #'
-#' @importFrom magrittr "%>%"
+#' @importFrom dplyr "%>%"
+#' @importFrom magrittr "%<>%"
 #'
 #' @return The mutated tibble with a new column labeled datetime_[.tz].
 #'
@@ -72,7 +73,8 @@ datetime_stampify <- function(.data, .datetime, .tz = "UTC") {
 #' @param .channel A DBI object that connects to the internal NEFSC Oracle database.
 #' @param .observer_name Name of the column field that identifies the observer name.
 #'
-#' @importFrom magrittr "%>%", "%<>%"
+#' @importFrom dplyr "%>%"
+#' @importFrom magrittr "%<>%"
 #'
 #' @return The mutated tibble.
 #'
@@ -119,7 +121,8 @@ observer_codify <- function(.data, .channel, .observer_name) {
 #' @inheritParams observer_codify
 #' @param .observer_position Name of the column field that identifies the observer position.
 #'
-#' @importFrom magrittr "%>%", "%<>%"
+#' @importFrom dplyr "%>%"
+#' @importFrom magrittr "%<>%"
 #'
 #' @return The mutated tibble.
 #'
@@ -166,7 +169,8 @@ position_codify <- function(.data, .channel, .observer_position) {
 #' @inheritParams observer_codify
 #' @param .seabird_behavior Name of the column field that identifies the seabird behavior.
 #'
-#' @importFrom magrittr "%>%", "%<>%"
+#' @importFrom dplyr "%>%"
+#' @importFrom magrittr "%<>%"
 #'
 #' @return The mutated tibble.
 #'
@@ -227,7 +231,7 @@ behavior_codify <- function(.data, .channel, .seabird_behavior) {
 #' @inheritParams remove_apostrophe
 #' @param .flight_direction Name of the column field that identifies the flight direction.
 #'
-#' @importFrom magrittr "%>%"
+#' @importFrom dplyr "%>%"
 #'
 #' @return The mutated tibble.
 #'
@@ -261,7 +265,8 @@ direction_codify <- function(.data, .flight_direction) {
 #' @inheritParams observer_codify
 #' @param .bird_age Name of the column field that identifies the bird age.
 #'
-#' @importFrom magrittr "%>%", "%<>%"
+#' @importFrom dplyr "%>%"
+#' @importFrom magrittr "%<>%"
 #'
 #' @return The mutated tibble.
 #'
@@ -318,7 +323,8 @@ age_codify <- function(.data, .channel, .bird_age) {
 #' @inheritParams observer_codify
 #' @param .seabird_association Name of the column field that identifies the seabird association.
 #'
-#' @importFrom magrittr "%>%", "%<>%"
+#' @importFrom dplyr "%>%"
+#' @importFrom magrittr "%<>%"
 #'
 #' @return The mutated tibble.
 #'
@@ -380,7 +386,8 @@ association_codify <- function(.data, .channel, .seabird_association) {
 #' @inheritParams observer_codify
 #' @param .flight_height Name of the column field that identifies the flight height.
 #'
-#' @importFrom magrittr "%>%", "%<>%"
+#' @importFrom dplyr "%>%"
+#' @importFrom magrittr "%<>%"
 #'
 #' @return The mutated tibble.
 #'
@@ -427,7 +434,8 @@ height_codify <- function(.data, .channel, .flight_height) {
 #' @inheritParams observer_codify
 #' @param .seabird_plumage Name of the column field that identifies the seabird plumage.
 #'
-#' @importFrom magrittr "%>%", "%<>%"
+#' @importFrom dplyr "%>%"
+#' @importFrom magrittr "%<>%"
 #'
 #' @return The mutated tibble.
 #'
@@ -482,7 +490,7 @@ plumage_codify <- function(.data, .channel, .seabird_plumage) {
 #' @inheritParams remove_apostrophe
 #' @param .sex Name of the column field that identifies the seabird sex.
 #'
-#' @importFrom magrittr "%>%"
+#' @importFrom dplyr "%>%"
 #'
 #' @return The mutated tibble.
 #'
