@@ -196,7 +196,7 @@ behavior_codify <- function(.data, .channel, .seabird_behavior) {
     !!bird_behave_var == 'Kleptoparasitizing' ~ 'piracy',
     !!bird_behave_var == 'Stationary' ~ 'milling',
     !!bird_behave_var == 'Resting' ~ 'sitting',
-    !!bird_behave_var == 'Under attack' ~ '',
+    !!bird_behave_var == 'Under attack' ~ NA_character_,
     !!bird_behave_var == 'Taking Off' ~ 'unknown flight',
     !!bird_behave_var == 'Flying' ~ 'unknown flight',
     !!bird_behave_var == 'Following' ~ 'following ship',
