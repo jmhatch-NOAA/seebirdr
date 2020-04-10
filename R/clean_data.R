@@ -304,7 +304,7 @@ age_codify <- function(.data, .channel, .bird_age) {
   # get database table of bird age codes and clean column names so they're snake case
   dbs_bird_age <- DBI::dbGetQuery(conn = .channel, statement = "SELECT AGECODE, AGE FROM MAMMAL_SOUND.BIRDAGE") %>% janitor::clean_names(case = 'snake')
 
-  # create field to link tables (ensure l ower case)
+  # create field to link tables (ensure lower case)
   dbs_bird_age %<>% dplyr::rename(link = age) %>% mutate(link = link %>% tolower)
 
   # set the linking 'by' variable in .data to 'link'
