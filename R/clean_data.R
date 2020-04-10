@@ -464,8 +464,8 @@ plumage_codify <- function(.data, .channel, .seabird_plumage) {
   .data %<>% mutate(!!bird_plum_var := case_when(
     !!bird_plum_var == 'Non-breeding/Basic fall and winter plumage' ~ 'non-breeding',
     !!bird_plum_var == 'Breeding/Alternate spring and summer plumage' ~ 'breeding',
-    !!bird_plum_var == 'Gannet plumage 1' ~ '',
-    !!bird_plum_var == 'Gannet plumage 2' ~ '',
+    !!bird_plum_var == 'Gannet plumage 1' ~ NA_character_,
+    !!bird_plum_var == 'Gannet plumage 2' ~ NA_character_,
     TRUE ~ as.character(!!bird_plum_var)
   ))
 
