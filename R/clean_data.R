@@ -289,10 +289,15 @@ age_codify <- function(.data, .channel, .bird_age) {
   # modify bird age variable to match database descriptions
   .data %<>% mutate(!!bird_age_var := case_when(
     !!bird_age_var == 'Immature' ~ 'subadult',
-    !!bird_age_var == 'First cycle' ~ 'subadult',
     !!bird_age_var == 'Juvenile' ~ 'subadult',
+    !!bird_age_var == 'First cycle' ~ 'subadult',
     !!bird_age_var == 'Second cycle' ~ 'subadult',
     !!bird_age_var == 'Third cycle' ~ 'subadult',
+    !!bird_age_var == 'Fourth cycle' ~ 'subadult',
+    !!bird_age_var == 'First year' ~ 'subadult',
+    !!bird_age_var == 'Second year' ~ 'subadult',
+    !!bird_age_var == 'Third year' ~ 'subadult',
+    !!bird_age_var == 'Fourth year' ~ 'subadult',
     TRUE ~ as.character(!!bird_age_var)
   ))
 
