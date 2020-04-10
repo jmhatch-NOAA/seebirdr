@@ -23,7 +23,7 @@ remove_apostrophe <- function(.data, ...) {
 
 #' datetime_stampify
 #'
-#' Create a datetime column from character strings.
+#' Create a datetime column from character strings or POSIXct class.
 #' Assumes datetime has a timezone of UTC, but this can be modified with the .tz argument.
 #'
 #' @inheritParams remove_apostrophe
@@ -44,7 +44,7 @@ datetime_stampify <- function(.data, .datetime, .tz = "UTC") {
   # new column name as string
   datetime_name_str <- paste0('datetime_', .tz %>% tolower())
 
-  # make sure .datetime field is a character, otherwise assume POSIXct class
+  # make sure .datetime field is type character, otherwise assume POSIXct class
   if(!is.character(.data %>% dplyr::pull(!!datetime_name_var))) {
 
     # call warning
