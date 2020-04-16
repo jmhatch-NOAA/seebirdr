@@ -22,6 +22,12 @@ Several of the functions require a connection to the internal NEFSC database fol
 .channel <- DBI::dbConnect(odbc::odbc(), driver = [driver], DBQ = [dbq], UID = [uid], PWD = [pwd])
 ```
 
+Or if you are already connected to the internal NEFSC network:
+
+```R
+.channel <- DBI::dbConnect(odbc::odbc(), DSN = [dsn], UID = [uid], PWD = [pwd])
+```
+
 ### Example
 
 An example workflow of how to use the functionality of `seebirdr` is provided below:
